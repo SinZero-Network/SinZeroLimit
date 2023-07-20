@@ -1,0 +1,140 @@
+# 1. Site Settings
+title               : 中弦局·九弦之都
+owner               : false            
+baseurl             : ""
+permalink           : /:title/
+description         : "A hacker-style note-keeping website template."
+markdown            : kramdown
+statement           : "中弦局, All Rights Reserved"
+bgtext              : "ABCFGHKLMNPQRSVWXYZabcdefghijklmnopqrstuvwxyz@#$%&*+-;/[]<>~" # texts randomly displayed in background
+
+# 2. Your Collections
+# You can specify the order shown in Archive window. 
+# Keep it null if you want to show items in alphabetic order.
+collection_order    : 
+  [
+    "project",
+  ]
+collections:
+  project:   
+    output          : true
+    permalink       : /:collection/:title/
+
+# 3. Comment settings
+comments_provider: twikoo
+
+# https://disqus.com
+disqus:
+    username         : 
+
+lazy_load_disqus: false
+
+# https://imsun.net/posts/gitment-introduction/
+gitment:
+    owner            : 
+    repo             : 
+    oauth            :
+        client_id    : 
+        client_secret: 
+# https://kgithub.com/gitalk/gitalk#install
+gitalk:
+    owner            : 
+    repo             : 
+    clientID         : 
+    clientSecret     : 
+# https://utteranc.es/
+utterances:
+    repo             : 
+# https://beaudar.lipk.org/
+beaudar:
+    repo             : 
+# https://giscus.app/zh-CN
+giscus:
+    repo             : 
+    repo-id          : 
+    category         : 
+    category-id      : 
+# https://twikoo.js.org
+twikoo:
+    version          : 1.6.16
+    envId            : https://twk.sinzmise.cf/
+    region           : 
+    lang             : zh-CN
+# https://detalk.js.org
+detalk:
+    version          :
+    url              :
+    
+# 4. Default page settings (WILL BE overwriten by front-matters of a page)
+defaults:
+  -    
+    scope:
+      path          : ""  # an empty string here means all files in the project
+    values:
+      layout              : "post"      # which layout to use by default
+      publish             : true        # whether to show by default      
+      btn_text            : true        # whether show button text by default
+      start_button        : true        # whether show archive button by default
+      home_btn            : true        # whether show home by default
+      maximize            : true        # whether show maximize button by default
+      encrypted_text      : false       # whether use encrytion function by default
+      toc                 : true        # whether show table of content by default
+      toc_level           : 3           # the toc depth by default
+      author              : "DeerRIDER" # author name by default
+      show_date           : true        # whether show date message by default
+      category            :             # category by default
+      post_list           : false       # whether show list of post by default      
+      comment             : true
+      footer              : true        # whether show footer by default
+
+# 5. Social Media Accounts
+email               : "https://github.com/akiritsu/pRoJEct-VeXEd" 
+linkedin            : 
+github              : "just-test" 
+gitlab              : 
+website             : "https://github.com/akiritsu/pRoJEct-VeXEd"
+twitter             : "just-test"
+facebook            : "just-test"
+instagram           : 
+youtube             : "just-test"
+steam               : "just-test"
+weibo               :
+      
+# 6. Where things are
+source              : .
+destination         : ./_site
+collections_dir     : collections
+plugins_dir         : src/_plugins # takes an array of strings and loads plugins in that order
+layouts_dir         : src/_layouts
+data_dir            : src/_data
+includes_dir        : src/_includes
+sass:
+  sass_dir          : src/_sass
+
+# 7. Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  
+gems: [jekyll-mermaid]
+
+# 8. Others
+# Cross-Origin Resource Sharing header
+webrick:
+  headers:
+    Access-Control-Allow-Origin: "*"
+
+# Effects
+click               : love # Click（love/fire）
+water_ripples       : true
+live2d              : false
+
+# Music
+aplayer             : true
+meting: 
+  enable            : true
+  api               : https://api.injahow.cn/meting/
+  server            : netease
+  type              : playlist
+  id                : 8253386665

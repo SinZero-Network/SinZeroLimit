@@ -1,0 +1,137 @@
+<!-- collection list, shown by click "archive" buttom in header -->
+<div class="collection_list_container"  id="the_collection_list">
+<div class="collection_list_background"  onclick="close_collection_list()"></div>
+<div class="collection_list" onload="none">
+    <div class="collection_list_header">
+        <!-- TODO: search post -->
+                                            <!-- <a class="search_btn">
+      <i class="fa fa-search"> Search</i>
+    </a>
+    &nbsp; -->
+        <table class="collection_list_header_title">
+            <tr>
+                <td>
+                    <a class="a_collection_label" onclick="show_collection('all')">Start</a>
+                </td>
+                    {% if site.collection_order %}
+                        {% for col_in_order in site.collection_order %}
+                            {% for collection in site.collections %}
+                                {% if collection.label == col_in_order %}
+                                    <td> 
+                                        |
+                                        <a class="a_collection_label" onclick="show_collection('{{collection.label}}')">
+                                            {% if collection.alias %}
+                                                {{collection.alias}}
+                                            {% else %}
+                                                {{collection.label}}
+                                            {% endif %}
+                                        </a>
+                                    </td>
+                                {% endif %}
+                            {% endfor %}
+                        {% endfor %}
+                    {% else %}
+                        {% for collection in site.collections %}
+                            <td> 
+                                <a class="a_collection_label" onclick="show_collection('{{collection.label}}')">
+                                    {% if collection.alias %}
+                                        {{collection.alias}}
+                                    {% else %}
+                                        {{collection.label}}
+                                    {% endif %}
+                                </a>
+                            </td>
+                        {% endfor %}
+                    {% endif %}
+            </tr>
+        </table>
+        <div class="close_btn" onclick="close_collection_list()">
+            <a class="close_btn_icon">
+                <i class="fa fa-times"></i>
+            </a>
+        </div>
+    </div>
+    <div class="posts_by_cate">
+        <!-- post list in all collections -->
+        <div class="post_list_in_1_collection" id="all">
+            <table class="vertical_center_table">
+                <tr>
+                    <td>
+                        <ul>
+                            <li style="margin: 10px -7px;">
+                                <div id="he-plugin-simple"></div>
+<script>
+WIDGET = {"CONFIG":{"modules":"01234","background":"5","tmpColor":"45765F","tmpSize":"16","cityColor":"45765F","citySize":"16","aqiColor":"45765F","aqiSize":"16","weatherIconSize":"24","alertIconSize":"18","padding":"10px 10px 10px 10px","shadow":"1","language":"auto","borderRadius":"10","fixed":"false","vertical":"top","horizontal":"left","key":"1dd70cb98c3148dd9fb359ac3ee67f4c"}}
+</script>
+<script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script>
+                            </li>
+                            <h1> Archives </h1>
+                            {% if site.collection_order %}
+                            {% for col_in_order in site.collection_order %}
+                                {% for collection in site.collections %}
+                                    {% if collection.label == col_in_order %}
+                                        <p class="h_collection_label">
+                                            {% if collection.alias %}
+                                                {{collection.alias}}
+                                            {% else %}
+                                                {{collection.label}}
+                                            {% endif %}
+                                        </p>
+                                        {% for post in collection.docs %}
+                                            {% if post.publish != false %}
+                                                <li>
+                                                    <a class="a_title" href="{{site.url}}{{site.baseurl}}{{post.url}}">{{post.title}}</a>
+                                                </li>
+                                            {% endif %}
+                                        {% endfor %}
+                                        <br/>
+                                    {% endif %}
+                                {% endfor %}
+                            {% endfor %}
+                        {% else %}
+                            {% for collection in site.collections %}
+                                <p class="h_collection_label">
+                                    {% if collection.alias %}
+                                        {{collection.alias}}
+                                    {% else %}
+                                        {{collection.label}}
+                                    {% endif %}
+                                </p>
+                                {% for post in collection.docs %}
+                                    {% if post.publish != false %}
+                                        <li>
+                                            <a class="a_title" href="{{site.url}}{{site.baseurl}}{{post.url}}">{{post.title}}</a>
+                                        </li>
+                                    {% endif %}
+                                {% endfor %}
+                                <br/>
+                            {% endfor %}
+                        {% endif %}
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <!-- post list in a collection -->
+        {% for collection in site.collections %}
+            <div class="post_list_in_1_collection" id="{{collection.label}}">
+                <table class="vertical_center_table">
+                    <tr>
+                        <td>
+                            <ul>
+                                {% for post in collection.docs %}
+                                    {% if post.publish != false %}
+                                        <li>
+                                            <a class="a_title" href="{{site.url}}{{site.baseurl}}{{post.url}}">{{post.title}}</a>
+                                        </li>
+                                    {% endif %}
+                                {% endfor %}
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+</div>
