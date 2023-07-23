@@ -9,3 +9,7 @@
 {% endif %}
 <link rel="stylesheet" href="{% if site.cdn.option.fontawesome %}{{ site.cdn.option.fontawesome }}{% else %}https://unpkg.com/@fortawesome/fontawesome-free/css/all.min.css{% endif %}">
 <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+
+{% if site.aplayer %}
+<link rel="stylesheet" href="{% if site.cdn.option.aplayer_css %}{{ site.cdn.option.aplayer_css }}{% else %}https://unpkg.com/aplayer/dist/APlayer.min.css{% endif %}">
+{% endif %}

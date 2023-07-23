@@ -18,40 +18,54 @@ highlightstyle: 'xcode'
 styles: [agate, androidstudio, arta, asceti, atelier-cave.dark, atelier-cave.light, atelier-dune.dark, atelier-dune.light, atelier-estuary.dark, atelier-estuary.light, atelier-forest.dark, atelier-forest.light, atelier-heath.dark, atelier-heath.light, atelier-lakeside.dark, atelier-lakeside.light, atelier-plateau.dark, atelier-plateau.light, atelier-savanna.dark, atelier-savanna.light, atelier-seaside.dark, atelier-seaside.light, atelier-sulphurpool.dark, atelier-sulphurpool.light, brown_paper, codepen-embed, color-brewer, dark, darkula, default, docco, far, foundation, github, github-gist, googlecode, grayscale, hopscotch, hybrid, idea, ir_black, kimbie.dark, kimbie.light, magula, mono-blue, monokai, monokai_sublime, obsidian, paraiso.dark, paraiso.light, pojoaque, railscast, rainbow, school_book, solarized_dark, solarized_light, styles_list.txt, sunburst, tomorrow, tomorrow-night-blue, tomorrow-night-bright, tomorrow-night, tomorrow-night-eightie, v, xcode, zenburn]
 
 # Comment settings
-comments_provider: twikoo
+comments_provider: disqusjs
 
 # https://disqus.com
 disqus:
-    username: 
+  username: 
 
 lazy_load_disqus: false
 
+# https://github.com/SukkaW/DisqusJS#使用
+disqusjs:
+  shortname: sinzmise-zhuye
+  siteName: 九弦之都
+  title: 中弦局·九弦之都
+  api: https://dqjs.pl.sinzmise.eu.org/api/
+  apikey: sBbNblejh5JQioDttubRmbK6h8KN8qP3bEvZn00EU1YKZnldxOm9LrU2ozVQrFjj
+  nesting:
+  nocomment: 这里冷冷清清的，一条评论都没有
+
+disqusjs_badge:
+  admin: SZNinty
+  adminLabel: 中弦局局长
+
 # https://github.com/gitalk/gitalk#install
 gitalk:
-    owner: 
-    repo: 
-    clientID: 
-    clientSecret: 
+  owner: 
+  repo: 
+  clientID: 
+  clientSecret: 
 # https://utteranc.es/
 utterances:
-    repo: 
+  repo: 
 # https://beaudar.lipk.org/
 beaudar:
-    repo: 
+  repo: 
 # https://giscus.app/zh-CN
 giscus:
-    repo: 
-    repo-id: 
-    category: 
-    category-id: 
+  repo: 
+  repo-id: 
+  category: 
+  category-id: 
 # https://twikoo.js.org
 twikoo:
-    envId: https://twk.sinzmise.cf/
-    region: 
-    lang: zh-CN
+  envId: https://twk.sinzmise.cf/
+  region: 
+  lang: zh-CN
 # https://detalk.js.org
 detalk:
-    url:
+  url:
 
 # Build settings
 highlighter: null
@@ -60,18 +74,34 @@ markdown: kramdown
 # Pjax settings
 pjax: true
 
+# Music（Aplayer） settings
+aplayer: true
+meting: 
+  enable: true
+  api: https://api.moeyao.cn/meting/
+
 inject:
   head:
   bottom:
+    - <meting-js server="netease" type="playlist" id="8253386665" fixed="true"></meting-js>
     - <script async src="https://status.sinzmise.top/a8f9c04189c7d6a2b6b03f4f3948ef41" data-website-id="a87715ab-c2b6-488b-baa2-cbd28a2cb9e3"></script>
     - <script src="/assets/js/YingHua.min.eval.js"></script>
 
 cdn:
   option:
+    # pjax:
+    # gitalk:
+    # gitalk_css:
+    # disqusjs:
+    # disqusjs_css:
+    # twikoo:
+    # utterances:
+    # giscus:
+    # detalk:
+    # aplayer_css:
+    # aplayer_js:
+    # meting_js:
     # fontawesome:
+    # highlight:
     # highlight_css:
     # normalize:
-    # highlight: 
-    # gitalk_css:
-    # gitalk_js:  
-    # detalk: 

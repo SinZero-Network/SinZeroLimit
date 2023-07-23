@@ -71,10 +71,55 @@
           <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
         {% endif %}
       {% endif %}
+    {% when 'disqusjs' %}
+      <link rel="stylesheet" href="{% if site.cdn.option.disqusjs_css %}{{ site.cdn.option.disqusjs_css }}{% else %}https://unpkg.com/disqusjs/dist/browser/styles/disqusjs.css{% endif %}" />
+      <script src="{% if site.cdn.option.disqusjs %}{{ site.cdn.option.disqusjs }}{% else %}https://unpkg.com/disqusjs/dist/browser/disqusjs.es2015.umd.min.js{% endif %}"></script>
+      <div id="disqusjs"></div>
+      <script>
+        let disqusjs = null;
+        // 初始化 DisqusJS 实例
+        disqusjs = new DisqusJS({
+            shortname:'{{ site.disqusjs.shortname }}',
+            siteName:'{{ site.disqusjs.siteName }}',
+            title:'{{ site.disqusjs.title }}',
+            api:'{{ site.disqusjs.api }}',
+            apikey:'{{ site.disqusjs.apikey }}',
+            nesting:'{{ site.disqusjs.nesting }}',
+            nocomment:'{{ site.disqusjs.nocomment }}',
+            admin:'{{ site.disqusjs_badge.admin }}',
+            adminLabel:'{{ site.disqusjs_badge.adminLabel }}',
+          });
+        // 将 DisqusJS 渲染到页面上
+        disqusjs.render(document.getElementById('disqusjs'));
+    
+        document.addEventListener('pjax:send', () => {
+          // 销毁 DisqusJS 实例
+          disqusjs.destroy();
+        });
+    
+        document.addEventListener('pjax:complete', () => {
+          // 使用新的参数（如新的 identifier 和 url）创建全新的 DisqusJS 实例
+          disqusjs = new DisqusJS({
+            shortname:'{{ site.disqusjs.shortname }}',
+            siteName:'{{ site.disqusjs.siteName }}',
+            identifier:'{{ page.url }}',
+            url:'{{ site.url }}{{ page.url }}',
+            title:'{{ site.disqusjs.title }}',
+            api:'{{ site.disqusjs.api }}',
+            apikey:'{{ site.disqusjs.apikey }}',
+            nesting:'{{ site.disqusjs.nesting }}',
+            nocomment:'{{ site.disqusjs.nocomment }}',
+            admin:'{{ site.disqusjs_badge.admin }}',
+            adminLabel:'{{ site.disqusjs_badge.adminLabel }}',
+          });
+          // 渲染新的 DisqusJS
+          disqusjs.render(document.getElementById('disqusjs'));
+        });
+      </script> 
     {% when 'gitalk' %}
         <div id="gitalk-container"></div>
         <link rel="stylesheet" href="{% if site.cdn.option.gitalk_css %}{{ site.cdn.option.gitalk_css }}{% else %}https://unpkg.com/gitalk/dist/gitalk.css{% endif %}">
-        <script src="{% if site.cdn.option.gitalk_js %}{{ site.cdn.option.gitalk_js }}{% else %}https://unpkg.com/gitalk@1/dist/gitalk.min.js{% endif %}"></script>
+        <script src="{% if site.cdn.option.gitalk %}{{ site.cdn.option.gitalk }}{% else %}https://unpkg.com/gitalk/dist/gitalk.min.js{% endif %}"></script>
         <script>
         var gitalk = new Gitalk({
             id: '{{ page.url | truncate: 50, '' }}',
@@ -89,7 +134,7 @@
         gitalk.render('gitalk-container');
         </script>
   {% when 'utterances' %}
-        <script src="https://utteranc.es/client.js"
+        <script src="{% if site.cdn.option.utterances %}{{ site.cdn.option.utterances }}{% else %}https://utteranc.es/client.js{% endif %}"
                 repo="{{ site.utterances.repo }}"
                 issue-term="title"
                 label="gitment"
@@ -98,7 +143,7 @@
                 async>
         </script>
   {% when 'beaudar' %}
-        <script src="https://beaudar.lipk.org/client.js"
+        <script src="{% if site.cdn.option.beaudar %}{{ site.cdn.option.beaudar }}{% else %}https://beaudar.lipk.org/client.js{% endif %}"
                 repo="{{ site.beaudar.repo }}"
                 issue-term="title"
                 issue-label="{{ page.url | truncate: 50, '' }}"
@@ -110,7 +155,7 @@
                 async>
         </script>
   {% when 'giscus' %}
-        <script src="https://giscus.app/client.js"
+        <script src="{% if site.cdn.option.giscus %}{{ site.cdn.option.giscus }}{% else %}https://giscus.app/client.js{% endif %}"
                 data-repo="{{ site.giscus.repo }}"
                 data-repo-id="{{ site.giscus.repo-id }}"
                 data-category="{{ site.giscus.category }}"

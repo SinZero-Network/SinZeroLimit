@@ -2,7 +2,7 @@
 <script>hljs.initHighlightingOnLoad();</script>
 
 {% if site.pjax %}
-<script src="https://unpkg.com/pjax@0.2.8/pjax.js"></script>
+<script src="{% if site.cdn.option.pjax %}{{ site.cdn.option.pjax }}{% else %}https://unpkg.com/pjax/pjax.min.js{% endif %}"></script>
 <script>
     var pjax = new Pjax({
     // 在页面进行 PJAX 时需要被替换的元素或容器，一条一个 CSS 选择器，数组形式
@@ -82,4 +82,10 @@ document
 </script>
 {% endif %}
 
-{{ site.inject.bottom }}
+{% if site.aplayer %}
+<script src="{% if site.cdn.option.aplayer_js %}{{ site.cdn.option.aplayer_js }}{% else %}https://unpkg.com/aplayer/dist/APlayer.min.js{% endif %}"></script>
+{% if site.meting.enable %}
+<script src="{% if site.cdn.option.meting %}{{ site.cdn.option.meting }}{% else %}https://unpkg.com/meting/dist/Meting.min.js{% endif %}"></script>
+<script>var meting_api='{% if site.meting.api %}{{ site.meting.api }}{% else %}https://api.injahow.cn/meting/{% endif %}?server=:server&type=:type&id=:id&auth=:auth&r=:r';</script>
+{% endif %}
+{% endif %}
