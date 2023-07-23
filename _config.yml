@@ -31,7 +31,7 @@ disqusjs:
   shortname: sinzmise-zhuye
   siteName: 九弦之都
   title: 中弦局·九弦之都
-  api: https://dqjs.pl.sinzmise.eu.org/api/
+  api: https://api.disqus.sinzmise.gq/
   apikey: sBbNblejh5JQioDttubRmbK6h8KN8qP3bEvZn00EU1YKZnldxOm9LrU2ozVQrFjj
   nesting:
   nocomment: 这里冷冷清清的，一条评论都没有
