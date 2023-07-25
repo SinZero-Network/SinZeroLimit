@@ -1,5 +1,5 @@
 <script src="{% if site.cdn.option.highlight %}{{ site.cdn.option.highlight }}{% else %}https://unpkg.com/@highlightjs/cdn-assets/highlight.min.js{% endif %}"></script>
-<script>hljs.initHighlightingOnLoad();</script>
+<script>hljs.highlightAll();</script>
 
 {% if site.pjax %}
 <script src="{% if site.cdn.option.pjax %}{{ site.cdn.option.pjax }}{% else %}https://unpkg.com/pjax/pjax.min.js{% endif %}"></script>
@@ -9,7 +9,7 @@
     selectors: [
       "title",
       "meta[name=description]", // 如果是全部 meta 替换的话，只需要写 meta
-      ".wrapper"
+      ".container"
     ],
   })
   var loadingBar = document.querySelector(".loading-bar");

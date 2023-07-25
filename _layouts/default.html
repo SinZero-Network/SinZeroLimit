@@ -11,7 +11,10 @@
 </div>
 <div class="wrapper">
 {% include header.html %}
+<div class="container">
 {{ content }}
+</div>
+{% include page/about.html %}
 </div>
 {% include externals/scripting.html %}
 {{ site.inject.bottom }}

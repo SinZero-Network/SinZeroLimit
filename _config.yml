@@ -89,6 +89,7 @@ inject:
 
 cdn:
   option:
+    # jquery:
     # pjax:
     # gitalk:
     # gitalk_css:

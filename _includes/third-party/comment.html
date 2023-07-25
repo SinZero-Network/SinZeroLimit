@@ -81,6 +81,8 @@
         disqusjs = new DisqusJS({
             shortname:'{{ site.disqusjs.shortname }}',
             siteName:'{{ site.disqusjs.siteName }}',
+            identifier:'{{ page.url }}',
+            url:'{{ site.url }}',
             title:'{{ site.disqusjs.title }}',
             api:'{{ site.disqusjs.api }}',
             apikey:'{{ site.disqusjs.apikey }}',
@@ -103,7 +105,7 @@
             shortname:'{{ site.disqusjs.shortname }}',
             siteName:'{{ site.disqusjs.siteName }}',
             identifier:'{{ page.url }}',
-            url:'{{ site.url }}{{ page.url }}',
+            url:'{{ site.url }}',
             title:'{{ site.disqusjs.title }}',
             api:'{{ site.disqusjs.api }}',
             apikey:'{{ site.disqusjs.apikey }}',
