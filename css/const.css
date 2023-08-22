@@ -1,0 +1,209 @@
+.bg-color0 {
+  background: #495057;
+}
+.bg-color1 {
+  background: #f03e3e;
+}
+.bg-color2 {
+  background: #ae3ec9;
+}
+.bg-color3 {
+  background: #7048e8;
+}
+.bg-color4 {
+  background: #4263eb;
+}
+.bg-color5 {
+  background: #1098ad;
+}
+.bg-color6 {
+  background: #0ca678;
+}
+.bg-color7 {
+  background: #37b24d;
+}
+.bg-color8 {
+  background: #f59f00;
+}
+.bg-color9 {
+  background: #f76707;
+}
+.bg-color10 {
+  background: #6f42c1;
+}
+.post-comment {
+  position: relative;
+  margin: 40px 0 20px 0;
+  padding: 10px 16px;
+  background: var(--rgba-color);
+  border-radius: 4px;
+  transition: all 0.5s;
+}
+/* 亮色模式 */
+:root {
+  --rgba-color: rgba(255,255,255,0.8);
+  --dark-button: block;
+  --light-button: none;
+  --font-color: #333;
+  --title-color: #666c34;
+  --ragb-color: rgba(255,255,255,0.9);
+  --title2-color: #000;
+  --bg-color: linear-gradient(174.08deg, #f2ffd4 28%, #d2ff70 54%, #b4ff5b 69.93243243243244%, #a6ff00 85%, #9eff00 100%);
+  --index-title-color: #5e8;
+  --index-title-text-shadow: #6f9;
+}
+/* 深色模式 */
+[data-theme="dark"] {
+  --rgba-color: rgba(0,0,0,0.85);
+  --dark-button: none;
+  --light-button: block;
+  --font-color: #dee2e6;
+  --title-color: #fff3cd;
+  --ragb-color: rgba(0,0,0,0.7);
+  --title2-color: #fff;
+  --bg-color: repeating-linear-gradient(11.6deg, #442828 0%, #000042 100%);
+  --index-title-color: #555;
+  --index-title-text-shadow: #333;
+}
+.music-box {
+  top: 0;
+  z-index: 999;
+  left: 0;
+  width: 100%;
+  position: fixed;
+}
+.music-box .inner-box {
+  max-width: 1250px;
+  position: relative;
+  margin: auto;
+}
+.music-box .inner-box #pcMusic {
+  position: absolute;
+  right: 15px;
+  top: 62px;
+  height: auto;
+  width: 350px;
+  overflow: hidden;
+  pointer-events: none;
+  display: none;
+}
+.music-box .inner-box #pcMusic.music-show {
+  pointer-events: all;
+  display: block;
+}
+#disqus_proxy_thread .disqus-statement {
+  color: var(--font-color) !important;
+}
+.index .title {
+  font-size: 50px; /*设置文字大小*/
+  color: var(--index-title-color);
+/*设置文字颜色透明*/
+  text-align: center; /*设置文字居中*/
+  -webkit-animation: shine 2.4s infinite; /*设置动画*/
+}
+.index .description {
+  color: var(--index-title-color);
+/*设置文字颜色透明*/
+  text-align: center; /*设置文字居中*/
+}
+@-webkit-keyframes shine {
+  0%, 100% {
+    color: var(--index-title-color);
+    text-shadow: 0 0 10px var(--index-title-text-shadow), 0 0 10px var(--index-title-text-shadow);
+  }
+  50% {
+    text-shadow: 0 0 10px var(--index-title-text-shadow), 0 0 40px var(--index-title-text-shadow);
+  }
+}
+@-moz-keyframes rotate3ding {
+  0% {
+    left: 0;
+    bottom: -12px;
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(4);
+  }
+  50% {
+    left: 100%;
+    bottom: 40px;
+    transform: scale(1);
+  }
+  70% {
+    transform: scale(0.3);
+  }
+  100% {
+    left: 0;
+    bottom: -12px;
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes rotate3ding {
+  0% {
+    left: 0;
+    bottom: -12px;
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(4);
+  }
+  50% {
+    left: 100%;
+    bottom: 40px;
+    transform: scale(1);
+  }
+  70% {
+    transform: scale(0.3);
+  }
+  100% {
+    left: 0;
+    bottom: -12px;
+    transform: scale(1);
+  }
+}
+@-o-keyframes rotate3ding {
+  0% {
+    left: 0;
+    bottom: -12px;
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(4);
+  }
+  50% {
+    left: 100%;
+    bottom: 40px;
+    transform: scale(1);
+  }
+  70% {
+    transform: scale(0.3);
+  }
+  100% {
+    left: 0;
+    bottom: -12px;
+    transform: scale(1);
+  }
+}
+@keyframes rotate3ding {
+  0% {
+    left: 0;
+    bottom: -12px;
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(4);
+  }
+  50% {
+    left: 100%;
+    bottom: 40px;
+    transform: scale(1);
+  }
+  70% {
+    transform: scale(0.3);
+  }
+  100% {
+    left: 0;
+    bottom: -12px;
+    transform: scale(1);
+  }
+}

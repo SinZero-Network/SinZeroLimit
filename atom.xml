@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>中弦局·九弦之都</title>
+  
+  <subtitle>SinZero Limit site</subtitle>
+  <link href="https://www.sinzmise.top/atom.xml" rel="self"/>
+  
+  <link href="https://www.sinzmise.top/"/>
+  <updated>2023-08-22T07:27:33.398Z</updated>
+  <id>https://www.sinzmise.top/</id>
+  
+  <author>
+    <name>王九弦SZ·Ninty</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>SinZero游戏之家介绍</title>
+    <link href="https://www.sinzmise.top/SinZeroGame/3eeb/"/>
+    <id>https://www.sinzmise.top/SinZeroGame/3eeb/</id>
+    <published>2023-08-17T07:58:02.456Z</published>
+    <updated>2023-08-22T07:27:33.398Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="SinZero-Game介绍"><a href="#SinZero-Game介绍" class="headerlink" title="SinZero Game介绍"></a>SinZero Game介绍</h1><p>这个站主要是收集一些带来回忆的游戏（目前收录的并不多，而且都是我的回忆。。。。。。）</p><h1 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h1><p><a href="https://games.sinzmise.top/">https://games.sinzmise.top/</a> （主站）<br><br><a href="https://games.sinzmise.cf/">https://games.sinzmise.cf/</a> （Netlify线路，但域名可能要没，详情：<a href="https://maaio.com/2023/07/20/ml%e5%9f%9f%e5%90%8d%e8%a2%ab%e5%9b%9e%e6%94%b6%e4%ba%86%e5%90%97/">ML域名被回收了吗</a>）<br><br><a href="https://games.sinzmise.link/">https://games.sinzmise.link/</a> 或 <a href="https://games.sinzmise.eu.org/">https://games.sinzmise.eu.org/</a> （CloudFlare线路）<br></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;SinZero-Game介绍&quot;&gt;&lt;a href=&quot;#SinZero-Game介绍&quot; class=&quot;headerlink&quot; title=&quot;SinZero Game介绍&quot;&gt;&lt;/a&gt;SinZero Game介绍&lt;/h1&gt;&lt;p&gt;这个站主要是收集一些带来回忆的游戏（目前收录</summary>
+      
+    
+    
+    
+    <category term="SinZeroGame" scheme="https://www.sinzmise.top/categories/SinZeroGame/"/>
+    
+    
+  </entry>
+  
+</feed>
