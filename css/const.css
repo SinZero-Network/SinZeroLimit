@@ -51,6 +51,7 @@
   --bg-color: linear-gradient(174.08deg, #f2ffd4 28%, #d2ff70 54%, #b4ff5b 69.93243243243244%, #a6ff00 85%, #9eff00 100%);
   --index-title-color: #5e8;
   --index-title-text-shadow: #6f9;
+  --disqus-font-color: #37475b;
 }
 /* 深色模式 */
 [data-theme="dark"] {
@@ -64,6 +65,22 @@
   --bg-color: repeating-linear-gradient(11.6deg, #442828 0%, #000042 100%);
   --index-title-color: #555;
   --index-title-text-shadow: #333;
+  --disqus-font-color: #dee2e6;
+}
+#dsqjs #dsqjs-msg {
+  line-height: 1.5;
+}
+#dsqjs .dsqjs-post-list .dsqjs-post-item .dsqjs-post-header .dsqjs-admin-badge {
+  padding: 3px 3px !important;
+  top: 1px !important;
+}
+#dsqjs .dsqjs-order-label {
+  color: #333;
+}
+#dsqjs .dsqjs-post-content p,
+#dsqjs .dsqjs-nav-tab,
+#dsqjs #dsqjs-msg {
+  color: var(--disqus-font-color) !important;
 }
 .music-box {
   top: 0;
