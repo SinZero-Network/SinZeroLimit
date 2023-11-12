@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .loading{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  background: url('/images/floralbg.gif');
+}
+.loading .loading-warp{
+    margin: 0 auto;
+}
+.loading.loaded{
+  animation: slide-out-top 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+      @keyframes slide-out-top {
+        0% {
+          transform: translateY(0);
+
+        }
+        100% {
+          transform: translateY(10000px);
+        }
+    </style>
+    <script>
+      function getQueryVariable(variable)
+        {
+              var query = window.location.search.substring(1);
+              var vars = query.split("&");
+              for (var i=0;i<vars.length;i++) {
+                      var pair = vars[i].split("=");
+                      if(pair[0] == variable){return pair[1];}
+              }
+              return(false);
+        }
+        var isAjax = getQueryVariable('ajax') ? true : false
+        console.log(isAjax)
+    </script>
+    
+
+<title>中弦局·九弦之都</title>
+<meta charset="UTF-8">
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content=""/>
+<meta name="description" content=""/>
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<meta name="renderer" content="webkit" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="msapplication-tap-highlight" content="no">
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+
+
+  <link href="//at.alicdn.com/t/c/font_4199232_sj7zifwr3ws.css" rel="stylesheet">
+
+
+
+  <script src="//at.alicdn.com/t/c/font_4199232_i2wc4yxaj2.js"></script>
+
+
+
+  <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.1.2/css/all.min.css" rel="stylesheet">
+
+
+
+  <link rel="icon" href="/images/icon.png">
+
+
+<script src="/js/rem.js"></script>
+
+
+<link rel="stylesheet" href="/css/common.css">
+
+
+<script src="/js/svg-inject.min.js"></script>
+
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script id="swiperJs" src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js"></script>
+
+  <meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="中弦局·九弦之都" type="application/atom+xml">
+</head>
+  <body>
+
+    <!-- loading -->
+    <div class="loading" id="loading">
+      <div class="loading-warp">
+        <div align="center">
+          <center>
+            　<table width="auto" background="/images/frame004.gif" bordercolorlight="#94BAA4" bordercolordark="#517D64" border="1" cellspacing="0" cellpadding="15">
+              <tbody>
+              <tr>
+                <td width="100%">
+                  <div align="center">
+                    <table width="100%" background="/images/zgok.jpg" bordercolorlight="#94baa4" bordercolordark="#517d64" border="1" cellspacing="0" cellpadding="8">
+                      <tbody>
+                      <tr>
+                        <td width="100%">
+                          <div align="center">
+                            <table width="100%" background="/images/frame004.gif" bordercolorlight="#94BAA4" bordercolordark="#517D64" border="1" cellspacing="0" cellpadding="0">
+                              <tbody>
+                              <tr>
+                                <td width="100%">
+                                  <center>
+                                    <p>
+                                      &nbsp;<br>
+                                    <h1 style="margin: 12px;">正在加载界面。。。。。</h1>
+                                    欢迎旅行者来到这个花园<br>
+                                    　</p></center></td></tr></tbody></table></div></td></tr></tbody></table></div></td></tr></tbody></table></center></div>
+      </div>
+    </div>
+
+    <!-- main -->
+    <div class="main height-100 flex flex-v">
+      <div class="mobile-logo flex flex-align-center">
+        <img src="/images/logo.png" alt="中弦局·九弦之都" title="中弦局·九弦之都" class="flex1" />
+        <a alt="菜单" tile="菜单"  to="/home" class="mobile-nav-btn iconfont icon-menu" onclick="switchMobileMenu()"></a>
+      </div>
+      <div class="main-top flex flex1">
+        
+        <!--主页上左部分-->
+        <div class="height-100 main-left  flex flex-v">
+          <div class="main-left-top flex1">
+            <a alt="logo" title="logo"  class="logo"  onclick="navigation('/')">
+              <img title="中弦局·九弦之都" alt="中弦局·九弦之都" src="/images/logo.png" />
+              <div class="sub-title">欢迎来到这座花园</div>
+            </a>
+            <nav class="nav">
+
+  
+    
+      <a title="首页"  alt="首页" link="/"  onclick="navigation('/')"  class="active">
+        
+        
+        
+          <img class="icon" src="/icon/home.svg" onload="SVGInject(this)"></img>
+        
+        <div class="name">
+          <div class="cnname">首页</div>
+          <div class="enname">Home Page</div>
+        </div>
+      </a>
+    
+      <a title="归档"  alt="归档" link="/archives/"  onclick="navigation('/archives/')"  class="">
+        
+        
+        
+          <img class="icon" src="/icon/archives.svg" onload="SVGInject(this)"></img>
+        
+        <div class="name">
+          <div class="cnname">归档</div>
+          <div class="enname">Archive Page</div>
+        </div>
+      </a>
+    
+  
+
+  <!--<a href="/link/">
+    <div class="icon"><i class="iconfont icon-link"></i></div>
+    <div class="name">
+      <div class="cnname">友情链接</div>
+      <div class="enname">Friends Web Link</div>
+    </div>
+  </a>-->
+</nav>
+
+<script>
+  var currentPage = window.location.pathname
+  // 异步加载页面
+  function navigation (url, isPopstate) {
+    if (currentPage === url) {
+      return false
+    }
+    $('nav a').removeClass('active')
+    const index =$('nav a').filter(index => {
+      if ($('nav a').eq(index).attr('link') === url) {
+        $('nav a').eq(index).addClass('active')
+        return index
+      }
+    })
+    $('#main-body').html(`<iframe id="main-body-iframe" src="${url}?ajax=true" frameborder="no" border="0"></iframe>`)
+    if(!isPopstate) {
+      window.history.pushState(window.history.state, '', window.location.origin + url)
+    }
+    currentPage = url
+    // $('#main-body-loading').css('display', 'flex')
+    // $('nav a').removeClass('active')
+    // const index =$('nav a').filter(index => {
+    //   if ($('nav a').eq(index).attr('link') === url) {
+    //     $('nav a').eq(index).addClass('active')
+    //     return index
+    //   }
+    // })
+    // fetch(url, {'Content-Type': 'text/html'})
+    // .then(res=>res.text()).then(function(html) {
+    //         const parser = new DOMParser();
+    //         const dom = parser.parseFromString(html, "text/html");
+    //         const newDom = dom.getElementById('main-body').children
+    //         $('#main-body').html(newDom)
+    //         if(!isPopstate) {
+    //           window.history.pushState(window.history.state, '', window.location.origin + url)
+    //         }
+    // //         currentPage = url
+    //         if (url === '/') {
+    //           let script = document.createElement('script')
+    //           script.type= 'text/javascript'
+    //           let scriptSrc='/js/index.js'
+    //           script.src= scriptSrc
+    //           var head = document.getElementsByTagName('head')[0]
+    //           head.appendChild(script)
+    //         }
+    //         // 手机端选择完要隐藏菜单
+    //         const clientWidth = document.documentElement.clientWidth
+    //         if (clientWidth < 1000) {
+    //           $('.main .main-left').css('margin-left', '-81%')
+    //           const btn = $('.mobile-nav-btn')
+    //           btn.removeClass('icon-close')
+    //           btn.removeClass('active')
+    //           btn.addClass('icon-menu')
+    //           $('.main .main-left').css('margin-left', '-81%')
+    //         }
+    //         setTimeout(() => {
+    //             $('#main-body-loading').fadeOut()
+    //         }, 500)
+    // })
+  }
+
+
+  window.addEventListener('popstate',function(event){
+    const path = window.location.pathname
+    navigation(path, true)
+  })
+</script>
+          </div>
+    
+          <view class="website-msg">
+            <div class="copyright">Copyright &#169 2023 <a href="">中弦局·九弦之都</a> </div>
+            
+              <div class="beian"><a alt="萌ICP备20210071号" title="萌ICP备20210071号" target="_blank" href="https://icp.gov.moe/?keyword=20210071">萌ICP备20210071号</a></div>
+            
+            <div class="theme-drsc">框架<a alt="Hexo" title="Hexo" href="https://hexo.io" target="_blank">Hexo</a> 主题基于<a href="" target="_blank">Soul</a>魔改</div>
+          </view>
+          <!-- 社交图标 -->
+          
+            <div class="social flex flex-align-center ">
+              
+                <a class="flex1 text-center" href="mailto:email@sinzmise.top" target="_blank" title="icon-email" alt="icon-email">
+                  <div class="icon relative flex flex-align-center flex-pack-center">
+                    
+                      <svg class="svg-icon" aria-hidden="true">
+                        <use xlink:href="#icon-email"></use>
+                      </svg>
+                    
+                    
+                    
+                  </div>
+                </a>
+              
+                <a class="flex1 text-center" href="https://github.com/SinZero-Network" target="_blank" title="/icon/github.svg" alt="/icon/github.svg">
+                  <div class="icon relative flex flex-align-center flex-pack-center">
+                    
+                    
+                    
+                      <img class="svg-icon" src="/icon/github.svg" onload="SVGInject(this)"></img>
+                    
+                  </div>
+                </a>
+              
+                <a class="flex1 text-center" href="/atom.xml" target="_blank" title="/icon/rss.svg" alt="/icon/rss.svg">
+                  <div class="icon relative flex flex-align-center flex-pack-center">
+                    
+                    
+                    
+                      <img class="svg-icon" src="/icon/rss.svg" onload="SVGInject(this)"></img>
+                    
+                  </div>
+                </a>
+              
+            </div>
+          
+        </div>
+        <!--主页上右部分-->
+
+        <div class="main-right flex1">
+          <div id="main-body">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.min.css">
+<div id="post-list" class="post-list flex flex-v">
+    <div class="box-content flex1">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                
+                    <a title="个人主页装修" alt="个人主页装修" onclick="showpostDetail('/posts/3eeb.html')"
+                       class="post-item swiper-slide flex flex-v">
+                        <div class="image">
+                            
+                                <img title="个人主页装修" alt="个人主页装修" src="https://vip1.loli.io/2022/05/11/bhROcn4aE16TBMy.jpg"></img>
+                            
+                        </div>
+                        <div class="content-warp flex1 flex flex-v">
+                            <div class="title">&lt; 个人主页装修 &gt;</div>
+                            <div class="content flex1">
+                                
+  前言没错，这栋花园又装修了（话说这是第几次给我的花园装修了。。。。。。）
+之前这座花园的Hexo主题是基于Hexo-Theme-Fan魔改但是魔改的效果。。。。说实话我很不满意，因为那个魔改为了添加特效导致站点越来越偏离“花园”这个主题 
+后面找到了hexo-theme-soul这个主题我看上了它的全站伪SPA(单页面)无刷新页面加载，就将这个主题魔改了一遍
+魔改内容
+魔改成花园风格 （图片素材我拿的yini.org的图片。。。。。主要是素材难找）
+下方播放器换成aplayer，位置我也修改了一遍（原先放播放器的地方我给分割成两列，长的放一言，短的就是音乐播放器啦）
+添加sharejs分享，Giscus评论系统（主要是里面有rem.js，导致Twikoo不好适配，删了这个js还导致样式错乱，要不然我就用twokoo了）
+
+
+
+                            </div>
+                            <div class="post-tags">
+                                
+                            </div>
+                            <div class="other">
+                                <!--<a><i class="iconfont icon-iconfontordinaryliulan"></i>52</a>-->
+                                <!--<a><i class="iconfont icon-icon27"></i>52</a>-->
+                                <span><i class="iconfont icon-shijian"></i>8月 17, 2023</span>
+                            </div>
+                        </div>
+                    </a>
+                
+                <!-- more -->
+                
+            </div>
+            <div class="swiper-scrollbar"></div>
+        </div>
+    </div>
+</div>
+<!-- 文章详情弹窗 -->
+<iframe id="post-detail-modal" frameborder="no" border="0"></iframe>
+
+<script src="/js/index.js"></script>
+
+          </div>
+
+          <div id="main-body-loading" class="flex flex-align-center flex-pack-center">
+            <div class="loading-warp">
+              <div align="center">
+                <center>
+                  　<table width="688" background="/images/frame004.gif" bordercolorlight="#94BAA4" bordercolordark="#517D64" border="1" cellspacing="0" cellpadding="15">
+                    <tbody>
+                    <tr>
+                      <td width="100%">
+                        <div align="center">
+                          <table width="100%" background="/images/zgok.jpg" bordercolorlight="#94baa4" bordercolordark="#517d64" border="1" cellspacing="0" cellpadding="8">
+                            <tbody>
+                            <tr>
+                              <td width="100%">
+                                <div align="center">
+                                  <table width="100%" background="/images/frame004.gif" bordercolorlight="#94BAA4" bordercolordark="#517D64" border="1" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                    <tr>
+                                      <td width="100%">
+                                        <center>
+                                          <p>
+                                            &nbsp;<br>
+                                          <h1>正在加载界面。。。。。</h1>
+                                          欢迎旅行者来到这个花园<br>
+                                          　</p></center></td></tr></tbody></table></div></td></tr></tbody></table></div></td></tr></tbody></table></center></div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      <div class="main-bottom">
+        <div class="main-bottom-left">Tips:</div>
+        <a class="main-bottom-right" onclick="document.getElementById('pcMusic').classList.toggle('music-show')" href="javascript:;">
+          <i class="fas fa-headphones fa-fw"></i> 音乐</a>
+        <div class="main-bottom-center">
+          <p id="hitokoto_text">正在加载一言。。。。。</p>
+          <script>
+            fetch('https://v1.hitokoto.cn')
+                    .then(response => response.json())
+                    .then(data => {
+                      const hitokoto = document.querySelector('#hitokoto_text')
+                      hitokoto.href = `https://hitokoto.cn/?uuid=${data.uuid}`
+                      hitokoto.innerText = data.hitokoto + '（' + data.from + '）'
+                    })
+                    .catch(console.error)
+          </script>
+        </div>
+      </div>
+    </div>
+    <div class="music-box">
+      <div class="inner-box">
+        <div id="pcMusic">
+          <meting-js id="8253386665" listFolded="true" order="random" preload="metadata" server="netease" type="playlist"></meting-js>
+        </div>
+      </div>
+    </div>
+    <link rel="stylesheet" href="/css/APlayer.min.css" media="print" onload="this.media='all'">
+    <script src="/js/APlayer.min.js"></script>
+    <script src="/js/Meting.js?7"></script>
+    <!-- commonjs -->
+    
+<script src="/js/common.js"></script>
+
+    <!-- 百度统计 -->
+    
+<script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?f4e4f3d9d2532faa71e451f2ab41cbb6";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm, s);
+  })();
+</script>
+
+    
+  </body>
+</html>
+
+<script>
+  if (isAjax) {
+    $('.main-left').css('display', 'none')
+    $('.main-bottom').css('display', 'none')
+    $('.mobile-logo').css('display', 'none')
+  } else {
+    $('.hide-modal-btn').css('display', 'none')
+    $('audio').remove()
+  }
+  var gitalk = {
+    enable: eval('true'),
+    clientID: '85810192d72d7f763a9a',
+    clientSecret: 'e9867192041e53ad9f4581db6e50bbe7373a090d',
+    repo: 'myblog',
+    owner: 'callmesoul',
+    admin: ['callmesoul'],
+  }
+  function switchMobileMenu () {
+    const btn = $('.mobile-nav-btn')
+    const isActive = btn.hasClass('active')
+    if (isActive) {
+      btn.removeClass('icon-close')
+      btn.removeClass('active')
+      btn.addClass('icon-menu')
+      $('.main .main-left').css('margin-left', '-81%')
+    } else {
+      btn.removeClass('icon-menu')
+      btn.addClass('active')
+      btn.addClass('icon-close')
+      $('.main .main-left').css('margin-left', 0)
+    }
+  }
+</script>

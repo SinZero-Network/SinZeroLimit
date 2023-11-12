@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>中弦局·九弦之都</title>
+  
+  <subtitle>一个静谧的花园</subtitle>
+  <link href="https://www.sinzmise.top/atom.xml" rel="self"/>
+  
+  <link href="https://www.sinzmise.top/"/>
+  <updated>2023-11-12T13:03:24.589Z</updated>
+  <id>https://www.sinzmise.top/</id>
+  
+  <author>
+    <name>王九弦SZ·Ninty</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>个人主页装修</title>
+    <link href="https://www.sinzmise.top/posts/3eeb.html"/>
+    <id>https://www.sinzmise.top/posts/3eeb.html</id>
+    <published>2023-08-17T07:58:02.456Z</published>
+    <updated>2023-11-12T13:03:24.589Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>没错，这栋花园又装修了<br><del>（话说这是第几次给我的花园装修了。。。。。。）</del></p><p>之前这座花园的Hexo主题是基于<a href="https://github.com/fan-lv/Fan">Hexo-Theme-Fan</a>魔改<br>但是魔改的效果。。。。说实话我很不满意，因为那个魔改为了添加特效<br>导致站点越来越偏离“花园”这个主题 </p><p>后面找到了<a href="https://github.com/callmesoul/hexo-theme-soul/">hexo-theme-soul</a>这个主题<br>我看上了它的全站伪SPA(单页面)无刷新页面加载，就将这个主题魔改了一遍</p><h1 id="魔改内容"><a href="#魔改内容" class="headerlink" title="魔改内容"></a>魔改内容</h1><ul><li>魔改成花园风格 <del>（图片素材我拿的yini.org的图片。。。。。主要是素材难找）</del></li><li>下方播放器换成aplayer，位置我也修改了一遍（原先放播放器的地方我给分割成两列，长的放一言，短的就是音乐播放器啦）</li><li>添加sharejs分享，Giscus评论系统（主要是里面有rem.js，导致Twikoo不好适配，删了这个js还导致样式错乱，要不然我就用twokoo了）</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;没错，这栋花园又装修了&lt;br&gt;&lt;del&gt;（话说这是第几次给我的花园装修了。。。。。。）&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;之前这座花园的Hexo主题</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
